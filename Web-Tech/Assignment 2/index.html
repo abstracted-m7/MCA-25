@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Collection Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+            <div class="shape shape-6"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>User Data Management System</h1>
+            <p>Add and manage user information dynamically</p>
+        </div>
+        
+        <div class="content">
+            <!-- Form Section -->
+            <div class="form-section">
+                <h2>Add New User</h2>
+                <form id="userForm">
+                    <div class="form-group">
+                        <label for="name">
+                            <i class="icon">👤</i>
+                            Full Name
+                        </label>
+                        <input type="text" id="name" name="name" required placeholder="Enter full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age">
+                            <i class="icon">🎂</i>
+                            Age
+                        </label>
+                        <input type="number" id="age" name="age" required min="1" max="150" placeholder="Enter age">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="city">
+                            <i class="icon">🏙️</i>
+                            City
+                        </label>
+                        <input type="text" id="city" name="city" required placeholder="Enter city name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mobile">
+                            <i class="icon">📱</i>
+                            Mobile Number
+                        </label>
+                        <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" placeholder="Enter 10-digit mobile number">
+                    </div>
+                    
+                    <button type="submit" class="btn">
+                        <span>Add User</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Table Section -->
+            <div class="table-section">
+                <h2>Users Database</h2>
+                <div class="stats" id="stats">
+                    <div class="stats-item">
+                        <div class="stats-icon">👥</div>
+                        <div class="stats-number" id="totalUsers">0</div>
+                        <div class="stats-label">Total Users</div>
+                    </div>
+                    <div class="stats-item">
+                        <div class="stats-icon">📊</div>
+                        <div class="stats-number" id="avgAge">0</div>
+                        <div class="stats-label">Avg Age</div>
+                    </div>
+                    <div class="stats-item">
+                        <div class="stats-icon">🌍</div>
+                        <div class="stats-number" id="totalCities">0</div>
+                        <div class="stats-label">Cities</div>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table id="userTable">
+                        <thead>
+                            <tr>
+                                <th>👤 Name</th>
+                                <th>🎂 Age</th>
+                                <th>🏙️ City</th>
+                                <th>📱 Mobile</th>
+                                <th>⚡ Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="userTableBody">
+                            <tr class="empty-state">
+                                <td colspan="5">
+                                    <div class="empty-content">
+                                        <div class="empty-icon">📊</div>
+                                        <p>No users added yet.</p>
+                                        <small>Use the form to add your first user!</small>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="notification-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verious of Lists in HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Verious of Lists in HTML</h1>
+        <h3>Web-Assignment 1</h3>
+        
+        <div class="grid">
+            <!-- Ordered List Section -->
+            <div class="list-section">
+                <h2 class="section-title">
+                    <span class="icon">1</span>
+                    Ordered List
+                </h2>
+                <div class="form-group">
+                    <label for="orderedInput">Add item to ordered list:</label>
+                    <input type="text" id="orderedInput" placeholder="Enter info...">
+                </div>
+                <button class="btn" onclick="addOrderedItem()">Add Item</button>
+                <button class="btn" onclick="clearOrderedList()" style="background: linear-gradient(45deg, #e53e3e, #c53030); margin-top: 5px;">Clear All</button>
+                
+                <div class="list-display">
+                    <ol id="orderedList" style="list-style: none;">
+                        <div class="empty-state">No items yet. Add your first item above!</div>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Unordered List Section -->
+            <div class="list-section">
+                <h2 class="section-title">
+                    <span class="icon">•</span>
+                    Unordered List
+                </h2>
+                <div class="form-group">
+                    <label for="unorderedInput">Add item to unordered list:</label>
+                    <input type="text" id="unorderedInput" placeholder="Enter info...">
+                </div>
+                <button class="btn" onclick="addUnorderedItem()">Add Item</button>
+                <button class="btn" onclick="clearUnorderedList()" style="background: linear-gradient(45deg, #e53e3e, #c53030); margin-top: 5px;">Clear All</button>
+                
+                <div class="list-display">
+                    <ul id="unorderedList">
+                        <div class="empty-state">No items yet. Add your first item above!</div>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Definition List Section -->
+            <div class="list-section">
+                <h2 class="section-title">
+                    <span class="icon">Δ</span>
+                    Definition List
+                </h2>
+                <div class="form-group">
+                    <label for="termInput">Term:</label>
+                    <input type="text" id="termInput" placeholder="Enter term to define...">
+                </div>
+                <div class="form-group">
+                    <label for="definitionInput">Definition:</label>
+                    <textarea id="definitionInput" placeholder="Enter definition / description..."></textarea>
+                </div>
+                <button class="btn" onclick="addDefinition()">Add Definition</button>
+                <button class="btn" onclick="clearDefinitionList()" style="background: linear-gradient(45deg, #e53e3e, #c53030); margin-top: 5px;">Clear All</button>
+                
+                <div class="list-display">
+                    <dl id="definitionList">
+                        <div class="empty-state">No definitions yet. Add your first term and definition above!</div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3 - Main Navigation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #c0c0c0 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            max-width: 70%;
+            width: 100%;
+        }
+
+        .header {
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .folder-structure {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: left;
+            color: white;
+            font-family: 'Courier New', monospace;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .folder-structure h3 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .assignments-grid {
+            display: grid;
+            /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+            grid-template-columns: repeat(3, 1fr);   /* 3 equal-width columns */
+            grid-template-rows: repeat(6, auto);    /* 6 rows (auto height) */
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .assignment-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .assignment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .assignment-card h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .assignment-card p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .nav-link {
+            display: inline-block;
+            padding: 15px 25px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .nav-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        .nav-link:hover::before {
+            left: 100%;
+        }
+
+        .nav-link.assignment2 {
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+        }
+
+        .nav-link.assignment2:hover {
+            box-shadow: 0 10px 25px rgba(78, 205, 196, 0.4);
+        }
+
+        .nav-link.assignment3 {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+        }
+
+        .nav-link.assignment3:hover {
+            box-shadow: 0 5px 15px rgba(240, 147, 251, 0.4);
+        }
+
+        .nav-link.assignment4 {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+
+        .nav-link.assignment4:hover {
+            box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+        }
+
+        .nav-link.assignment5 {
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+        }
+
+        .nav-link.assignment5:hover {
+            box-shadow: 0 5px 15px rgba(168, 237, 234, 0.4);
+        }
+
+        .features-list {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            text-align: left;
+        }
+
+        .features-list h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .features-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .path-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            color: white;
+            border-left: 4px solid #ff6b6b;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .assignments-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .assignment-card {
+                padding: 25px;
+            }
+            
+            .nav-link {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📂 Assignment 3</h1>
+            <p>Navigation Hub - Access Assignment 1 & 2</p>
+        </div>
+
+        <div class="folder-structure">
+            <h3>📁 Folder Structure:</h3>
+            <pre>
+📂 Root Directory/
+├── 📂 Assignment1/
+│   └── 📄 index.html (User Data Form)
+├── 📂 Assignment2/
+│   └── 📄 index.html (Hyperlink Navigation)
+└── 📂 Assignment3/
+    └── 📄 index.html (This Page - Main Navigation)
+            </pre>
+        </div>
+
+        <div class="assignments-grid">
+            <div class="assignment-card">
+                <h3>📋 Assignment 1</h3>
+                <p>A simple project on Ordered list, Unordered list and Definition list</p>
+                <a href="../Assignment 1/index.html" class="nav-link">
+                    🚀 Open Assignment 1
+                </a>
+            </div>
+
+            <div class="assignment-card">
+                <h3>🔗 Assignment 2</h3>
+                <p>A project on creating a table for displaying name, age, city and mobile number.</p>
+                <a href="../Assignment 2/index.html" class="nav-link assignment2">
+                    🌐 Open Assignment 2
+                </a>
+            </div>
+
+            <div class="assignment-card">
+                <h3>🧭 Assignment 3</h3>
+                <p>Write a HTML code to create hyperlink to nevigate between 2 web pages.</p>
+                <a href="../Assignment 3/index.html" class="nav-link assignment3">
+                    🧭 Open Assignment 3
+                </a>
+            </div>
+
+            <div class="assignment-card">
+                <h3>🔗 Assignment 4</h3>
+                <p>Coming Soon....😁</p>
+                <!-- <a href="../Assignment 4/index.html" class="nav-link assignment3">
+                    🌐 Open Assignment 4
+                </a> -->
+            </div>
+
+            <div class="assignment-card">
+                <h3>🔗 Assignment 5</h3>
+                <p>Coming Soon....😁</p>
+                <!-- <a href="../Assignment 5/index.html" class="nav-link assignment4">
+                    🌐 Open Assignment 5
+                </a> -->
+            </div>
+
+            
+
+
+        </div>
+
+        <div class="features-list">
+            <h3>🎯 Navigation Features</h3>
+            <ul>
+                <li>🔗 <strong>Relative Path Navigation:</strong> ../Assignment1/index.html</li>
+                <li>📁 <strong>Folder Structure:</strong> Organized assignment directories</li>
+                <li>🎨 <strong>Responsive Design:</strong> Works on all devices</li>
+                <li>✨ <strong>Interactive Cards:</strong> Hover effects and animations</li>
+                <li>🏠 <strong>Central Hub:</strong> Easy access to all assignments</li>
+                <li>📱 <strong>Mobile Friendly:</strong> Optimized for mobile devices</li>
+                <li>🎭 <strong>Modern UI:</strong> Glass-morphism design effects</li>
+                <li>🔄 <strong>Easy Navigation:</strong> Clear paths between assignments</li>
+            </ul>
+        </div>
+
+        <div class="path-info">
+            <h4>📍 Current Location:</h4>
+            <p><strong>File:</strong> /Assignment3/index.html</p>
+            <p><strong>Assignment 1 Link:</strong> ../Assignment1/index.html</p>
+            <p><strong>Assignment 2 Link:</strong> ../Assignment2/index.html</p>
+        </div>
+    </div>
+</body>
+</html>
