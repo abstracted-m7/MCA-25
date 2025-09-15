@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Js</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            max-width: 400px;
+        }
+        #info {
+            background-color: chartreuse;
+            padding: 20px;
+            transition: opacity 2s ease;
+            opacity: 0;             
+            max-height: 0;        
+            overflow: hidden;
+            font-family: cursive;
+        }
+        #info.show {
+            opacity: 1;            
+            max-height: 500px;      
+        }
+
+        /*Calculator*/
+        .container-1{
+            background-color: aqua;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .container-1 input, select, button {
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: bisque;
+        }
+        button {
+            cursor: pointer;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        /*Temparature convertor*/
+        .container-2 {
+            margin-top: 20px;
+            background-color: rgb(140, 236, 121);
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        label, select, input, button {
+            display: block;
+            margin: 10px 0;
+            width: 100%;
+            font-size: 1em;
+        }
+        #temp-result{
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        /*To-Do List*/
+        
+    </style>  
+</head>
+<body>
+    <!-- ------------------------------------------------------------ -->
+    <h1>First Program in JS</h1>
+    <button type="button" onclick="displayInfo()">Display Info</button>
+    <p id="info"></p>
+
+    <script>
+            const info_text = `This is the introduction to JavaScript as part of web technologies. 
+            Come and see what it does. If you find any mistakes, please inform me. <br>
+            Here are the programs I have written so far:<br>
+            1. Calculator<br>
+            2. Temperature Converter<br>
+            3. To-Do List<br>
+            4. Simple Quiz<br>
+            5. etc.`;
+
+        function displayInfo() {
+            const info = document.getElementById("info");
+            info.innerHTML = info_text;
+            info.classList.add("show");  
+        }
+    </script>
+
+    <!-- Calculator  ------------------------------------------------------------ -->
+    <div class="container-1">
+        <h1>Arithmetic operations</h1>
+        <p>+, -, /, *, %, ^, Square root</p>
+        <!-- inputs in html -->
+        <input type="number" id="num1" placeholder="Enter first number" />
+        <select id="operation">
+            <option value="+">Addition (+)</option>
+            <option value="-">Subtraction (-)</option>
+            <option value="*">Multiplication (*)</option>
+            <option value="/">Division (/)</option>
+            <option value="%">Modulus (%)</option>
+            <option value="^">Exponentiation (^)</option>
+            <option value="sqrt">Square root (√)</option>
+        </select>
+        
+        <!-- Second number input hidden for square root -->
+        <input type="number" id="num2" placeholder="Enter second number" />
+
+        <button onclick="calculate()">Calculate</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <!-- make the calculator using js -->
+    <script>
+        const operationSelect = document.getElementById('operation');
+        const num2Input = document.getElementById('num2');
+
+        // Hide second input if square root is selected
+        operationSelect.addEventListener('change', () => {
+        if (operationSelect.value === 'sqrt') {
+            num2Input.style.display = 'none';
+        } else {
+            num2Input.style.display = 'block';
+        }
+        });
+
+        // Initialize
+        if (operationSelect.value === 'sqrt') {
+        num2Input.style.display = 'none';
+        }
+
+        function calculate() {
+        const num1 = parseFloat(document.getElementById('num1').value);
+        const op = operationSelect.value;
+        const resultDiv = document.getElementById('result');
+        let result;
+
+        if (isNaN(num1)) {
+            resultDiv.textContent = 'Please enter a valid first number.';
+            return;
+        }
+
+        if (op !== 'sqrt') {
+            const num2 = parseFloat(num2Input.value);
+            if (isNaN(num2)) {
+            resultDiv.textContent = 'Please enter a valid second number.';
+            return;
+            }
+            switch (op) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 === 0) {
+                resultDiv.textContent = 'Error: Division by zero!';
+                return;
+                }
+                result = num1 / num2;
+                break;
+            case '%':
+                if (num2 === 0) {
+                resultDiv.textContent = 'Error: Modulus by zero!';
+                return;
+                }
+                result = num1 % num2;
+                break;
+            case '^':
+                result = Math.pow(num1, num2);
+                break;
+            default:
+                resultDiv.textContent = 'Unknown operation.';
+                return;
+            }
+        } else {
+            if (num1 < 0) {
+            resultDiv.textContent = 'Error: Cannot take square root of negative number!';
+            return;
+            }
+            result = Math.sqrt(num1);
+        }
+
+        resultDiv.textContent = `Result: ${result}`;
+        }
+    </script>
+
+    <!--  Temperature Converter ------------------------------------------------------------ -->
+
+    <div class="container-2">
+    <h2>Temperature Converter</h2>
+
+    <label for="tempInput">Enter Temperature:</label>
+    <input type="number" id="tempInput" placeholder="Enter value" />
+
+    <label for="fromUnit">From:</label>
+    <select id="fromUnit">
+        <option value="C">Celsius (°C)</option>
+        <option value="F">Fahrenheit (°F)</option>
+        <option value="K">Kelvin (K)</option>
+    </select>
+
+    <label for="toUnit">To:</label>
+    <select id="toUnit">
+        <option value="C">Celsius (°C)</option>
+        <option value="F">Fahrenheit (°F)</option>
+        <option value="K">Kelvin (K)</option>
+    </select>
+
+    <button onclick="convertTemp()">Convert</button>
+
+    <p id="temp-result"></p>
+    </div>
+
+    <script>
+    function convertTemp() {
+        const input = parseFloat(document.getElementById('tempInput').value);
+        const from = document.getElementById('fromUnit').value;
+        const to = document.getElementById('toUnit').value;
+        const resultEl = document.getElementById('temp-result');
+
+        if (isNaN(input)) {
+        resultEl.textContent = "Please enter a valid number.";
+        return;
+        }
+
+        let tempInCelsius;
+
+        // Convert input to Celsius first
+        switch(from) {
+        case 'C':
+            tempInCelsius = input;
+            break;
+        case 'F':
+            tempInCelsius = (input - 32) * 5/9;
+            break;
+        case 'K':
+            tempInCelsius = input - 273.15;
+            break;
+        default:
+            resultEl.textContent = "Invalid 'From' unit.";
+            return;
+        }
+
+        let converted;
+
+        // Convert Celsius to desired unit
+        switch(to) {
+        case 'C':
+            converted = tempInCelsius;
+            break;
+        case 'F':
+            converted = (tempInCelsius * 9/5) + 32;
+            break;
+        case 'K':
+            converted = tempInCelsius + 273.15;
+            break;
+        default:
+            resultEl.textContent = "Invalid 'To' unit.";
+            return;
+        }
+
+        resultEl.textContent = `${input}°${from} = ${converted.toFixed(2)}°${to}`;
+    }
+    </script>
+
+    <!--  To-Do List ------------------------------------------------------------ -->
+
+</body>
+</html>
