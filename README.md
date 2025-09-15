@@ -4,17 +4,18 @@
 
 ## Directory Structure
 
-MCA/
-├── WEB/
-│ └── All Assignments.md
-├── AI/
-│ └── All Assignments.md
-├── Python/
-│ └── All Assignments.md
-├── DBMS/
-│ └── All Assignments.md
-└── Computer Organization/
-└── All Assignments.md
+MCA/  
+├── WEB/  
+│   └── All Assignments.md  
+├── AI/  
+│   └── All Assignments.md  
+├── Python/  
+│   └── All Assignments.md  
+├── DBMS/  
+│   └── All Assignments.md  
+└── Computer Organization/  
+    └── All Assignments.md  
+
 
 
 ## Description
@@ -32,3 +33,4 @@ Each subject folder contains a single markdown file `All Assignments.md` consoli
 ---
 
 Feel free to explore the folders for the respective assignments.
+
