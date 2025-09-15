@@ -1,6 +1,9 @@
-### MCA - 25
-## Name: MG
-## Code: 40
+# MCA - 25  
+**Name:** MG  
+**Code:** 40  
+
+## Directory Structure
+
 
 MCA/
 |-- WEB/
@@ -12,4 +15,5 @@ MCA/
 |-- DBMS/
 |   |-- All Assignments.md
 |--Computer Organization/
+
 |   |-- All Assignments.md
