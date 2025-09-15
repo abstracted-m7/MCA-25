@@ -1,6 +1,6 @@
 # MCA - 25  
-**Name:** MG  
-**Code:** 40  
+**Name:** Manish Giri  
+**Code:** BWU/BCA/25/040  
 
 ## Directory Structure
 
@@ -33,4 +33,5 @@ Each subject folder contains a single markdown file `All Assignments.md` consoli
 ---
 
 Feel free to explore the folders for the respective assignments.
+
 
