@@ -1,0 +1,20 @@
+1.	Create a list of integers from 1 to 10.
+2.	Perform:
+	append(), insert() operations.
+	Update and delete specific elements using index and value.
+	Sort and reverse the list.
+	Slice the list (e.g., first 5 elements, every second element).
+	Use list comprehension to generate a list of squares of even numbers.
+3.	Create tuples with:
+	Mixed types (e.g., (1, "Python", 3.14)),
+	Single-element tuple: (5,),
+	Nested tuples: (1, (2, 3), 4).
+4.	Demonstrate:
+	Tuple unpacking,
+	Access by indexing,
+	Methods like count() and index().
+5.	Create a set from a list with duplicates.
+6.	Apply:
+	add(), remove() methods,
+	union(), intersection(), difference() with other sets.
+7.	Use set comprehension to find squares of numbers divisible by 3.
