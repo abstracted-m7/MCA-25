@@ -98,3 +98,40 @@ INSERT INTO ACCIDENT VALUES
 (7,'2009-02-15','Highland Heights');
 
 /* INSERT DATA - PARTICIPATED */
+INSERT INTO PARTICIPATED VALUES
+(1, 'SZM813',0,4000),
+(2, 'SZM814',1,6000),
+(3, 'SZM815',4,6000),
+(4, 'SZM814',1,1000),
+(5, 'SZM817',4,6000),
+(6, 'SZM818',5,5000),
+(7, 'SZM819',0,5000),
+(4, 'SZM817',4,3000),
+(5, 'SZM813',0,4000),
+(6, 'SZM814',3,2000),
+(7, 'SZM814',1,1000),
+(7, 'SZM820',4,6000),
+(7, 'SZM813',3,4000);
+
+/*III. Write a SQL quary to update the damage amount for the car with specific registration number in the accident with report number between 1 & 5 */
+UPDATE PARTICIPATED
+SET DAMAGE_AMT = 11000
+WHERE REG_NO = 'SZM814'
+AND REPORT_NO BETWEEN 1 AND 5;
+
+SELECT *
+FROM PARTICIPATED;
+
+/*IV. Quary to find the total number of people who owned the cars that were involved in accidents in 2008 */
+SELECT COUNT(DISTINCT O.DRIVER_ID) AS NUM_OWNERS_OF_INVOLVED_CARS_2008
+FROM OWNS O
+JOIN PARTICIPATED P ON O.REG_NO = P.REG_NO
+JOIN ACCIDENT A ON P.REPORT_NO = A.REPORT_NO
+WHERE YEAR(A.ACCIDENT_DATE) = 2008;
+
+/*V. Quary to check if a person with a specific driver_id has met with on accIdent in 2009 */
+SELECT A.REPORT_NO, A.ACCIDENT_DATE, A.LOCATION, P.DAMAGE_AMT
+FROM PARTICIPATED P
+JOIN ACCIDENT A ON P.REPORT_NO = A.REPORT_NO
+WHERE DRIVER_ID = 3
+AND YEAR(A.ACCIDENT_DATE) = 2009;
