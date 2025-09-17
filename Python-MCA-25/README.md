@@ -195,7 +195,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-**Author**: abstracted-m7  
+**Author**: Manish Giri  
 **Program**: Master of Computer Applications (MCA) - 2025  
 **Repository**: [MCA-25](https://github.com/abstracted-m7/MCA-25)
 
