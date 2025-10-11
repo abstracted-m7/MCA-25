@@ -15,6 +15,7 @@
 
 */
 
+SET SQL_SAFE_UPDATES = 0;
 
 CREATE DATABASE BOOKS_MANAGEMENT_SYSTEM;
 USE BOOKS_MANAGEMENT_SYSTEM;
@@ -67,7 +68,6 @@ CREATE TABLE SHIPMENT(
 );
 
 
-SET SQL_SAFE_UPDATES = 0;
 
 /* INSERT DATA INTO CUSTOMER(CUST_NO,CNAME,CITY)*/
 INSERT INTO CUSTOMER VALUES
@@ -143,3 +143,11 @@ INSERT INTO SHIPMENT VALUES
 (1006, 205, '2025-10-07');
 
 SELECT * FROM WEAREHOUSE;
+
+/* III. Produce a listing: custname, no_of_orders, avg_order_amt, where the middle column is the total number opf orders by the customer and the last column is the avarage order amount for that customer. */
+
+
+
+/* IV. List the orderNo for the orders that were shipped from all the wearehouse that the company has in a specific city. */
+
+/* V. Demonstrate how you delete itemNo 10 from the item table and make that field null in the order-item table. */
