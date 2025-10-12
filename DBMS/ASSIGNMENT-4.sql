@@ -145,9 +145,37 @@ INSERT INTO SHIPMENT VALUES
 SELECT * FROM WEAREHOUSE;
 
 /* III. Produce a listing: custname, no_of_orders, avg_order_amt, where the middle column is the total number opf orders by the customer and the last column is the avarage order amount for that customer. */
-
+SELECT 
+    C.CNAME AS Customer_Name,
+    COUNT(O.ORDER_NO) AS No_of_Orders,
+    AVG(O.ORD_AMT) AS Avg_Order_Amount
+FROM 
+    CUSTOMER C
+JOIN 
+    CUST_ORDER O 
+ON 
+    C.CUST_NO = O.CUST_NO
+GROUP BY 
+    C.CNAME;
 
 
 /* IV. List the orderNo for the orders that were shipped from all the wearehouse that the company has in a specific city. */
 
+SELECT S.ORDER_NO
+FROM SHIPMENT S
+JOIN WEAREHOUSE W ON S.WRH_NO = W.WRH_NO
+WHERE W.CITY = 'Kolkata';
+
+
 /* V. Demonstrate how you delete itemNo 10 from the item table and make that field null in the order-item table. */
+
+/*Step 1: Modify foreign key constraint to allow nulls on delete */
+ALTER TABLE ORDER_ITEM DROP FOREIGN KEY order_item_ibfk_2;  -- ibfk_1 = Foreign key on ITEM_NO
+
+ALTER TABLE ORDER_ITEM
+ADD CONSTRAINT fk_itemno
+FOREIGN KEY (ITEM_NO) REFERENCES ITEM(ITEM_NO)
+ON DELETE SET NULL;
+
+DELETE FROM ITEM WHERE ITEM_NO = 101;
+
