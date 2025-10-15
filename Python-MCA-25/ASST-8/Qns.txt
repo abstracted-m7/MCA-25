@@ -1,0 +1,6 @@
+1. Create a file data.txt and copy its content into backup.txt.
+2. Rename backup.txt to data_backup.txt
+3. Create a directory called logs, and inside it:
+    a. create a file log1.txt.
+    b. Write log entries into it.
+4. Delete log1.txt and then remove the logs directory.
