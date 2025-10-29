@@ -1,0 +1,11 @@
+
+1)	Write programs to demonstrate exception handling for:
+        a)	Division by zero.
+        b)	Invalid file access (e.g., opening a non-existent file).
+        c)	Handling ValueError during type conversion.
+2)	Write a program to:
+        a)	Prompt user input.
+        b)	Perform a calculation inside try.
+        c)	Handle error in except.
+        d)	Print a final cleanup message in finally regardless of success or failure.
+3)	Create a program with try block that can raise multiple exceptions and handle them using different except blocks (e.g., IndexError, TypeError, FileNotFoundError).
