@@ -1,0 +1,6 @@
+Assignment 1
+1. Write a C program to insert an element at a particular position of an existing array.
+2. Write a C program to delete an element from a particular position of an existing array
+3. Write a C program to implement a linear search method to find a key in an array.
+4. Write a C program to find a key through a binary search method.
+5. Write a C program to find a key through the Interpolation search method.
