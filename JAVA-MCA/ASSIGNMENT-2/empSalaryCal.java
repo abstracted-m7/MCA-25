@@ -1,4 +1,5 @@
 /*
+Q. Create a java program t calculate employee salary uing modelar method.
     1. create emp class with name, id, designation, salary
     2. take input empName, basic, hra, da, pf, tax
     3. calculate gross and net salary
@@ -63,5 +64,6 @@ public class empSalaryCal {
     
         sc.close();
     }
+
 
 }
