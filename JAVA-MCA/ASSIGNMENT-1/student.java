@@ -1,4 +1,5 @@
 /*
+    Q. Write a java program to take student details and display the details.
     1. Input student name, roll, course, samester, marks
     2. Use gatter & setter method
         2.1. set student info ultile user wants to stop
@@ -62,3 +63,4 @@ public class student {
         sc.close();
     }
 }
+
