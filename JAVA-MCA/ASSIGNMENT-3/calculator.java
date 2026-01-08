@@ -37,7 +37,7 @@ class CalculatorOperations {
     }
 }
 
-public class demo {
+public class calculator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         CalculatorOperations cal = new CalculatorOperations(); // Create object once
@@ -98,4 +98,5 @@ public class demo {
 
         sc.close();
     }
+
 }
