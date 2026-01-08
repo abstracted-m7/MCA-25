@@ -1,0 +1,9 @@
+1. Create folder
+2. create php file: notepad day1.php (in cmd)
+3. Run php: php day1.php
+
+
+
+Q1. Print(), print_r(), echo()
+
+For run the html-php page run through cmd: php -S localhost:8080
