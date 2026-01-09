@@ -29,7 +29,7 @@ int main() {
 
     printf("Array after insertion:\n");
     for (i = 0; i < n; i++) {
-        printf("%d ", arr[i]);
+        printf("%d \n", arr[i]);
     }
 
     return 0;

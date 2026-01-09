@@ -9,7 +9,7 @@ int main() {
     int found = 0;
 
     while (low <= high) {
-        mid = low + (low + high) / 2;
+        mid = low + (high - low) / 2;
 
         if (arr[mid] == key) {
             printf("Key(%d) found at position %d", key, mid + 1);
