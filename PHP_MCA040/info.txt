@@ -7,3 +7,14 @@
 Q1. Print(), print_r(), echo()
 
 For run the html-php page run through cmd: php -S localhost:8080
+
+
+Array types:
+1. Index Array:
+	$Variable_name = array("elements");
+	a. accssesing:  echo $Variable_name[0];
+	b. Loop: foreach($Variable_name as $val){echo $val;}
+	c. count() -> counting no of elements.
+2. Assosiative Array:
+
+3. Multidimenssion Array:
