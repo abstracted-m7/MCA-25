@@ -21,7 +21,7 @@ public class numberSeries {
 
     Scanner sc = new Scanner(System.in);
 
-    System.out.print("Enter how many element you ant to generate: ");
+    System.out.print("Enter how many element you want to generate: ");
     int num = sc.nextInt();
     sc.nextLine();
 
@@ -30,3 +30,4 @@ public class numberSeries {
     System.out.println(Arrays.toString(arr));
   }  
 }
+
