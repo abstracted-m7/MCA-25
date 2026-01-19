@@ -19,9 +19,9 @@ class studentData {
         System.out.println("        STUDENT DETAILS       ");
         System.out.println("==============================");
         System.out.println("Name        :"+name);
-        System.out.println("Age:        :"+age);
         System.out.println("Course      :"+course);
         System.out.println("Institution :"+institution);
+        System.out.println("Age:        :"+age);
         System.out.println("==============================");
 
     }
@@ -35,7 +35,7 @@ public class studentInfo{
         String name, course, institution;
         int age;
 
-        System.out.print("Enter Your Info: ");
+        System.out.println("Enter Your Info: ");
         System.out.print("Name: ");
         name = sc.nextLine();
 
@@ -46,7 +46,7 @@ public class studentInfo{
         System.out.print("Course: ");
         course = sc.nextLine();
 
-        System.out.println("Institution: ");
+        System.out.print("Institution: ");
         institution = sc.nextLine();
 
         studentData stud = new studentData(name, course, institution, age);
