@@ -22,7 +22,6 @@ public class SumOfNNatural {
 
         System.out.print("Enter the number (limit): ");
         limit = sc.nextInt();
-        sc.close();
 
         sumCalculator cal = new sumCalculator();
         int result = cal.claculate(limit);
@@ -30,3 +29,4 @@ public class SumOfNNatural {
         sc.close();
     }
 }
+
