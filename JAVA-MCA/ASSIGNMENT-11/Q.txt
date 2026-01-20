@@ -1,4 +1,0 @@
-ASSIGNMENT-11:
-Create a Java program that generates a simple numeric pattern using 
-iterative statements. The program should produce a structured output 
-such as a right-angled number triangle based on a user-specified limit. 
