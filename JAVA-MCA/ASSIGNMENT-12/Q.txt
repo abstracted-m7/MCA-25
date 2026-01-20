@@ -1,5 +1,0 @@
-ASSIGNMENT-12:
-Design a Java application that calculates the sum of the first N natural 
-numbers using an iterative approach. The program should accept the 
-value of N from the user and compute the sum using a loop construct, 
-reinforcing the concept of accumulation and repetition in programming. 
