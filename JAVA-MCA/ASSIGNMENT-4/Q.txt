@@ -1,3 +1,0 @@
-ASSIGNMENT 4:
-
-Q. Create a java program that analyze a number entered by the user.
