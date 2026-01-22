@@ -1,2 +1,0 @@
-ASSIGNMENT - 7
-Design a java program that display a simple personal profile on the console. The program should store basic information such as name, age, course, and institution in appropriate variables and display them using formated output structure.
