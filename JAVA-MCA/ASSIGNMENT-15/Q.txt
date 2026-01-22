@@ -1,0 +1,2 @@
+ASSIGNMENT-15:
+Design a java program to calculate salary for different types of employees using inheritance.
