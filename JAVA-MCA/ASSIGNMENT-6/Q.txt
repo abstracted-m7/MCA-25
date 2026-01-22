@@ -1,3 +1,0 @@
-ASSIGNMENT-6:
-Q. Design a java program to generate a particular number series and perform basic analysis on it.
-
