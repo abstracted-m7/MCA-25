@@ -1,0 +1,2 @@
+ASSIGNMENT-20:
+Develop a Java program to initialize object data using a constructor and process it using methods. 
