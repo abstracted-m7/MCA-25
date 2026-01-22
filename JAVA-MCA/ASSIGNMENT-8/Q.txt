@@ -1,6 +1,0 @@
-ASSIGNMENT-8:
-
-Create a Java application that converts temperature from Celsius to 
-Fahrenheit. The program should accept the temperature value as input, 
-apply the appropriate conversion formula, and display the converted 
-result. 
