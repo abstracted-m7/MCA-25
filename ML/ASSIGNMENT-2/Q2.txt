@@ -1,0 +1,5 @@
+Q2. Implication of KNN and LogisticRegression on an IRIS dataset.The dataset picked from kaggle.com.
+
+Dataset: /kaggle/input/iris-dataset/iris.csv
+
+Date:09-01-2026
