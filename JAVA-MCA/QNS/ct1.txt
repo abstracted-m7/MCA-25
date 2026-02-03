@@ -1,0 +1,5 @@
+Q1. Write a program in java to show how arithmetic and relational operator works.
+
+Q2. Design a small class hierarchy for a "payroll system" that utilizas super to initializa parent class member.
+
+Q3. Write a java program to illustrate the use of while loop to print 100 to 1000.
