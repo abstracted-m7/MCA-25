@@ -65,49 +65,60 @@ public class ShapeArea {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        int choice;
+        do {
+                System.out.println("\nChoose Shape:");
+                System.out.println("1. Rectangle");
+                System.out.println("2. Circle");
+                System.out.println("3. Triangle");
+                System.out.println("4. Exit");
+                System.out.print("Enter choice: ");
+                choice = sc.nextInt();
 
-        System.out.println("Choose Shape:");
-        System.out.println("1. Rectangle");
-        System.out.println("2. Circle");
-        System.out.println("3. Triangle");
-        System.out.print("Enter choice: ");
-        int choice = sc.nextInt();
+                Shape shape = null; //abstract class object
 
-        Shape shape; //abstract class object
+                switch (choice) {
 
-        switch (choice) {
+                    case 1:
+                        System.out.print("Enter length: ");
+                        double l = sc.nextDouble();
+                        System.out.print("Enter breadth: ");
+                        double b = sc.nextDouble();
+                        shape = new Rectangle(l, b);
+                        break;
 
-            case 1:
-                System.out.print("Enter length: ");
-                double l = sc.nextDouble();
-                System.out.print("Enter breadth: ");
-                double b = sc.nextDouble();
-                shape = new Rectangle(l, b);
-                break;
+                    case 2:
+                        System.out.print("Enter radius: ");
+                        double r = sc.nextDouble();
+                        shape = new Circle(r);
+                        break;
 
-            case 2:
-                System.out.print("Enter radius: ");
-                double r = sc.nextDouble();
-                shape = new Circle(r);
-                break;
+                    case 3:
+                        System.out.print("Enter base: ");
+                        double base = sc.nextDouble();
+                        System.out.print("Enter height: ");
+                        double height = sc.nextDouble();
+                        shape = new Triangle(base, height);
+                        break;
+                    
+                    case 4:
+                        System.out.println("Thank You. Visit again..!!");
+                        break;
 
-            case 3:
-                System.out.print("Enter base: ");
-                double base = sc.nextDouble();
-                System.out.print("Enter height: ");
-                double height = sc.nextDouble();
-                shape = new Triangle(base, height);
-                break;
+                    default:
+                        System.out.println("Invalid choice!");
+                        sc.close();
+                        return;
+                }
 
-            default:
-                System.out.println("Invalid choice!");
-                sc.close();
-                return;
-        }
-
-        double area = shape.calculateArea();
-        shape.displayArea(area);
-
+                if (shape != null){
+                    double area = shape.calculateArea();
+                    shape.displayArea(area);
+                }
+                
+        } while (choice != 5);
         sc.close();
+
     }
 }
+
