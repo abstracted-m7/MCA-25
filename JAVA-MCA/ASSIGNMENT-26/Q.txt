@@ -1,0 +1,3 @@
+Q26. Develop a reusable Java application that functions as a matrix utility toolkit. The program should allow users to define and store matrices using two-dimensional arrays and perform operations such as matrix addition, transpose of a matrix, and calculation of diagonal elements’sum. Each matrix operation should be implemented as a separate 
+method to promote modularity and reusability, and the program should 
+clearly display the resulting matrices after each operation.

@@ -1,0 +1,1 @@
+Q24. Design a java program to demonstrate partial abstraction using abstract classes.

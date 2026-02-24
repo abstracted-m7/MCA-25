@@ -1,0 +1,1 @@
+Q23. Write a java program to demonstrate runtime polymorphism using base class references.
