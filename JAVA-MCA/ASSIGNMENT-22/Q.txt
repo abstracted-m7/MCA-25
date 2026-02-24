@@ -1,0 +1,1 @@
+Q22. Develop a java program to demonstrate multilevel inheritance.
