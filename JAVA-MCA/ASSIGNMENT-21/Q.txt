@@ -1,2 +1,1 @@
-ASSIGNMENT-21:
-Create a Java program to demonstrate method overloading using different data types. 
+Q21. Create a Java program to demonstrate method overloading using different data types.
