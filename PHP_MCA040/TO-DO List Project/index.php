@@ -1,6 +1,6 @@
 <?php
 include "db.php";
-$result = mysqli_query($conn, "SELECT * FROM tasks ORDER BY id DESC");
+$result = mysqli_query($conn, "SELECT * FROM tasks ORDER BY id ASC");
 ?>
 
 <!DOCTYPE html>
@@ -19,14 +19,26 @@ $result = mysqli_query($conn, "SELECT * FROM tasks ORDER BY id DESC");
 </form>
 
 <ul>
-<?php while ($row = mysqli_fetch_assoc($result)): ?>
+<?php 
+$counter = 1; 
+while ($row = mysqli_fetch_assoc($result)): 
+?>
     <li>
-        <?= ($row['status'] === 'completed') ? "<del>{$row['task']}</del>" : $row['task']; ?>
+        <?php if ($row['status'] === 'completed'): ?>
+            <del><?= $counter; ?>: <?= htmlspecialchars($row['task']); ?></del>
+        <?php else: ?>
+            <?= $counter; ?>: <?= htmlspecialchars($row['task']); ?>
+        <?php endif; ?>
 
-        <a href="update.php?id=<?= $row['id']; ?>">Complete</a>
-        <a href="delete.php?id=<?= $row['id']; ?>">Delete</a>
+        <span class="actions">
+            <a href="update.php?id=<?= $row['id']; ?>">Complete</a>
+            <a href="delete.php?id=<?= $row['id']; ?>" onclick="return confirm('Are you sure?')">Delete</a>
+        </span>
     </li>
-<?php endwhile; ?>
+<?php 
+$counter++; 
+endwhile; 
+?>
 </ul>
 
 </body>

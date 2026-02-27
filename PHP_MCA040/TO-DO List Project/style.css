@@ -1,3 +1,6 @@
+*{
+    background-color: rgb(119, 249, 249);
+}
 body {
     font-family: Arial;
     width: 400px;
@@ -7,8 +10,22 @@ body {
 h2 {
     text-align: center;
 }
-
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    color: brown;
+}
+button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #2677e0;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 ul {
+    text-align: center;
     list-style: none;
     padding: 0;
 }
