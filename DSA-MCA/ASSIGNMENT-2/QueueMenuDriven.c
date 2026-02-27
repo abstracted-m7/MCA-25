@@ -30,8 +30,9 @@ void display(){
 
 int main(){
 	int ch;
+	printf("\n1. Insert\n2. Delete\n3. Display\n4. Exit\n");
 	do{
-		printf("\n1. Insert\n2. Delete\n3. Display\n4. Exit\n");
+		printf("\nChoosing :");
 		scanf("%d",&ch);
 		switch(ch){
 			case 1: insert();break;
