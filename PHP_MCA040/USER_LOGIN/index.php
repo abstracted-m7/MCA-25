@@ -37,8 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <form method="post">
         <h2>Login or Sign Up</h2>
-        ID: <input type="text" name="user_id" required><br><br>
-        PW: <input type="password" name="password" required><br><br>
+        User_ID: <input type="text" name="user_id" required><br><br>
+        Password: <input type="password" name="password" required><br><br>
         <button type="submit">Continue</button>
         <?php if(isset($error)) echo "<p style='color:red'>$error</p>"; ?>
     </form>
