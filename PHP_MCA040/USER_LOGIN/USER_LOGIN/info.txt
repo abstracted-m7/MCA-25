@@ -1,0 +1,46 @@
+## Database create
+CREATE DATABASE user_info;
+USE user_info;
+
+-- Main login table
+CREATE TABLE user_table (
+    user_id VARCHAR(50) PRIMARY KEY,
+    password VARCHAR(255) NOT NULL,
+    active TINYINT(1) DEFAULT 1
+);
+
+-- Extended details table
+CREATE TABLE user_details (
+    user_id VARCHAR(50),
+    email VARCHAR(100),
+    name VARCHAR(100),
+    phone VARCHAR(20),
+    address VARCHAR(50),
+    FOREIGN KEY (user_id) REFERENCES user_table(user_id)
+);
+
+## task
+create a database in mysql attributes are : user_table: user_id, password, active. and it integrated with web page, user login and verify its password, if match then enter otherwise says incorrect password..
+another database table is user_details: user_id, email, name, phone, address. so first go for login with the credential user_id, password, login then open another page and give details the user_details. 
+write code in php, and mysql database.
+
+
+## delete something
+DELETE FROM table_name 
+WHERE id = your_id_value;
+
+
+## product database
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    description TEXT
+);
+
+CREATE TABLE orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id VARCHAR(50),
+    total_amount DECIMAL(10, 2),
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
