@@ -1,0 +1,3 @@
+Q35. Develop a Java application that manages a dynamic student registry using the Vector class. The program should support runtime addition
+and removal of student records and provide search functionality based on roll numbers or identifiers. The design should demonstrate dynamic
+data storage, wrapper class usage for numeric values, and menu-driven interaction for registry management.
