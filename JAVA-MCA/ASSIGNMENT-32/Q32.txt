@@ -1,0 +1,3 @@
+Q32.Develop a Java application that utilizes standard Java API packages to manage date and time operations. The program should display the
+current date and time, identify the day of the week, and calculate the number of days between two user-specified dates. The design should
+emphasize effective usage of built-in API classes rather than manual calculations, reinforcing the importance of library-based development.
