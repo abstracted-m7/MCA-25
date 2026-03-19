@@ -1,0 +1,5 @@
+
+Q34. Create a Java application that performs statistical calculations using wrapper objects instead of primitive data types. The program should
+store numeric values as wrapper class objects, relying on Java’s autoboxing and unboxing features to compute minimum, maximum,
+and average values. The design should highlight how automatic conversions simplify interaction between object-oriented structures and
+primitive operations.
