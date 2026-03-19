@@ -1,1 +1,11 @@
 Q31. Create a user-defined Java package that groups together academic utility classes. The package should contain classes responsible for managing student information and calculating grades based on marks. A separate Java program should import this package and access its classes to perform academic computations, thereby demonstrating package creation, access, and code modularization across multiple source files.
+
+
+
+
+# Note: How to run in CMD
+Step 1: Go to academics
+Step 2: execute: javac -d . Student.java GradeCalculator.java
+Step 3: Back to the folder: ASSIGNMENT-31
+Step 4: execute: javac MainApp.java
+Step 5: execute: java MainApp
