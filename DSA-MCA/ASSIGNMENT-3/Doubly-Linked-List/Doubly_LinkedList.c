@@ -8,7 +8,7 @@ typedef struct node {
     struct node* next;
 } node;
 
-struct node* head = NULL;
+node* head = NULL;
 //-----------------------------------------------------Insert Types-------------------------------------------------------------------//
 // Insert at the beginning
 void insert_beg() {
@@ -104,7 +104,29 @@ void display() {
     }
     printf("NULL");
 }
-
+//-----------------------------------------------------Searching-------------------------------------------------------------------//
+void searching(){
+	int key, flag;
+	printf("Enter the element want to search: ");
+	scanf("%d",&key);
+	
+	node *temp = head;
+	if (head == NULL){
+		printf("List is empty.");
+		return;
+	}
+	while(temp != NULL){
+		if(temp->data == key){
+			flag = 1;
+			break;
+		}else{
+			flag = 0;
+		}
+		temp = temp->next;
+	}
+	if(flag != 0) printf("\nKey Found..!!");
+	else printf("\nKey not found..!!");
+}
 //-----------------------------------------------------main function-------------------------------------------------------------------//
 int main() {
 	int ch;
@@ -119,7 +141,8 @@ int main() {
 		printf("\n\t3. Delete first node");
 		printf("\n\t4. Delete last node");
 		printf("\n\t5. Display all nodes");
-		printf("\n\t6. Exit");
+		printf("\n\t6. Searching element.");
+		printf("\n\t7. Exit");
 		printf("\n============================================");
 		printf("\nEnter the choice: ");
 		scanf("%d",&ch);
@@ -129,7 +152,8 @@ int main() {
 			case 3: delete_first(); break;
 			case 4:	delete_last(); break;
 			case 5: display(); break;
-			case 6: printf("Exiting..!!");return 0;
+			case 6: searching(); break;
+			case 7: printf("Exiting..!!");return 0;
 			default: printf("Invalid choice..!!"); return 0;
 		}
 	}
