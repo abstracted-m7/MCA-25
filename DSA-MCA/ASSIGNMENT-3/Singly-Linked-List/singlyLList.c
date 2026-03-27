@@ -233,6 +233,32 @@ void reverse_list(){
 	printf("List reversed physically.");
 }
 
+//-----------------------Searching-----------------------------
+void searching(){
+	int key, flag;
+	printf("\nEnter the value you want to search: ");
+	scanf("%d",&key);
+	
+	node *temp = head;
+	if(temp == NULL){
+		printf("List empty.");
+		return;
+	}
+	while(temp!=NULL){
+		if(temp->data == key){
+			flag = 1;
+			break;
+		}
+		else{
+			flag = 0;
+		}
+		temp = temp->next;
+	}
+	if(flag != 0) printf("\nKey found..!!");
+	else printf("\nKey Not found..");
+	
+}
+
 //main function
 int main(){
 	int ch;
@@ -250,7 +276,8 @@ int main(){
 	printf("\n\t9. Display all node.");
 	printf("\n\t10. Reverse display off all nodes.");
 	printf("\n\t11. Physically reverse the list.");
-	printf("\n\t12. Exit");
+	printf("\n\t12. Serching Element.");
+	printf("\n\t13. Exit");
 	printf("\n====================================================");
 	
 	while(1){
@@ -269,7 +296,8 @@ int main(){
 			case 9: display();break;
 			case 10: reverse_display(head);break;
 			case 11: reverse_list();break;
-			case 12: printf("Exiting..!!");return 0;
+			case 12: searching();break;
+			case 13: printf("Exiting..!!");return 0;
 			default: printf("Invalid choice..!");return 0;
 		}
 	}
