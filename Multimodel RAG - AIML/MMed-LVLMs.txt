@@ -1,0 +1,4 @@
+1. MULTIMODAL RAG SYSTEM
+2. Medical Large Vision-Language Models (Med-LVLMs) [https://arxiv.org/pdf/2410.13085? [1]]
+3. 
+
