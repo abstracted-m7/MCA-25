@@ -5,7 +5,7 @@ typedef struct node {
     int data;
     struct node* next;
 } node;
-struct node* head = NULL;
+node* head = NULL;
 //-----------------------------------------------------Insert Types-------------------------------------------------------------------//
 // Insert at the beginning
 void insert_beg() {
