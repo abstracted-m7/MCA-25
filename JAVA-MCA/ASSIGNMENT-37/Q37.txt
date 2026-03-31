@@ -1,0 +1,5 @@
+Q37. Create a system using Java where:
+• One thread generates numbers
+• Second thread checks prime numbers
+• Third thread computes factorial
+• Handle invalid input using throw
