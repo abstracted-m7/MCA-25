@@ -1,0 +1,4 @@
+Q39. 
+Simulate an online ticket booking system using Java where Multiple 
+users (threads) try to book tickets, but there are limited number of 
+tickets. Also define a user-defined NoTicketAvailableException.
