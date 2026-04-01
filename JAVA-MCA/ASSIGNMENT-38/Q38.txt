@@ -1,0 +1,6 @@
+Q38. 
+Simulate file processing using Java threads where:
+• Thread 1: Read data (simulated)
+• Thread 2: Process data
+• Thread 3: Display results
+• Handle missing data scenario using Exception Handling
