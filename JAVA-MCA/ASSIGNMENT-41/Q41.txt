@@ -1,0 +1,8 @@
+Q41. 
+Process student results using a Java Program implementing parallel
+threads:
+• Thread 1: Input marks
+• Thread 2: Calculate grade
+• Thread 3: Generate result summary
+• Create an InvalidMarksException exception to handle
+exceptional condition
