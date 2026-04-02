@@ -1,0 +1,6 @@
+Q42. 
+Design a producer–consumer system using Java:
+• Producer generates data
+• Consumer processes data
+• Controlled execution count
+• Throw exception if buffer is empty/full
