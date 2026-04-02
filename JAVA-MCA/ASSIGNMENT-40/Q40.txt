@@ -1,0 +1,8 @@
+Q40. 
+Design a banking system where multiple transactions occur 
+simultaneously.
+• Deposit and withdraw via threads
+• Balance shared across threads
+• Create InsufficientBalanceException and 
+InvalidAmountException Classes to handle exceptional 
+conditions
