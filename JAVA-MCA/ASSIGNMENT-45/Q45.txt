@@ -1,0 +1,4 @@
+45
+Design an online exam simulation system using Java. Create Thread for 
+timer, Thread for answering questions, and the system should Autosubmit on timeout. Use an ExamTimeoutException for handling timeout 
+exception.
