@@ -1,0 +1,4 @@
+47
+Validate different types of data using separate Java threads.
+Create Thread for numeric validation, Thread for string validation, and 
+Thread for range validation. Throw exceptions for invalid data.
