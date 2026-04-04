@@ -1,0 +1,5 @@
+48
+Design a Smart Service System using Java integrating:
+• Multithreading
+• User-defined exceptions
+• Modular design
