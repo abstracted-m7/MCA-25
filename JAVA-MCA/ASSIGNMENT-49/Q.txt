@@ -1,0 +1,8 @@
+49. 
+Design and implement a Java application that manages student records 
+using an ArrayList. The program should allow dynamic insertion, 
+deletion, and display of student objects at runtime, demonstrating 
+ordered data storage and index-based access. Each student record 
+should contain basic details such as roll number, name, and marks, and 
+the application should provide a menu-driven interface to manage 
+records efficiently. 
