@@ -1,0 +1,7 @@
+Develop a Java application that simulates an employee directory using 
+the Vector class. The program should support concurrent-safe dynamic 
+storage of employee records and allow operations such as adding new 
+employees, removing existing ones, and displaying the complete 
+directory. The design should highlight the difference between legacy 
+collections and modern collection classes while maintaining a 
+structured object-oriented approach. 
