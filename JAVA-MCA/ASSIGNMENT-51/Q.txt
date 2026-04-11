@@ -1,0 +1,7 @@
+Create a Java application that manages course enrollment using the List 
+interface. The system should store enrolled students in a list-based 
+structure and allow operations such as adding students at specific 
+positions, updating enrollment details, and iterating through the list to 
+display enrollment order. The program should demonstrate 
+polymorphic behavior by accessing an ArrayList object through a List 
+reference. 
