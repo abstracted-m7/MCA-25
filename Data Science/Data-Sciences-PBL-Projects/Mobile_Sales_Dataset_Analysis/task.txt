@@ -1,0 +1,11 @@
+1. Which mobile brand has the highest number of mobile models in the dataset? 
+2. Which are the top 10 mobile models based on their selling price? 
+3. What is the average selling price of mobiles for each brand? 
+4. Which mobile brand offers the highest average discount? 
+5. Which mobile brands have the highest average customer rating, and how does their average selling price compare? 
+6. How does mobile storage capacity affect the average selling price? Can you compare mobiles with different storage options? 
+7. Which mobile models provide the highest discount amount, and what percentage of their original price is discounted? 
+8. Which combination of memory and storage offers the best balance between selling price and customer rating? 
+9. Can you identify the top 10 mobile models that provide the best value for money by considering selling price, discount, storage, memory, and customer rating? Explain how you calculated the value score. 
+10. Can you analyze the factors that determine whether a mobile is classified as a "Good Product"? 
+Which factors such as price, discount, rating, memory, or storage appear to have the strongest relationship with Good Product? 

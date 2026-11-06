@@ -1,0 +1,10 @@
+1. Which restaurant has the highest number of food items in the dataset? 
+2. Which food items have the highest number of calories? Find the top 10 items. 
+3. What is the average calorie count of food items for each restaurant? 
+4. Which restaurant offers food items with the highest average protein content? 
+5. Which restaurant has the highest average amount of total fat, and which restaurant has the lowest? 
+6. Which food items contain the highest amount of sugar, and how many calories do those items contain? 
+7. How does the type of food item (salad or other) affect its average calories, fat, carbohydrates, and protein? 
+8. Which restaurant offers the best combination of low calories and high protein? Use the available nutritional information to support your answer. 
+9. Can you identify the 10 least healthy food items by creating a Health Risk Score using calories, total fat, saturated fat, trans fat, cholesterol, and sodium? 
+10. Can you compare the nutritional profiles of all restaurants and determine which restaurant provides the healthiest overall menu? Create your own scoring system using calories, fat, sugar, sodium, fiber, protein, and vitamins, and justify your ranking?

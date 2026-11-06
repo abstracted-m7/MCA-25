@@ -1,0 +1,10 @@
+1. Who are the top 10 batsmen based on their total runs scored across all matches? 
+2. Which 10 players have the highest strike rate among players who have faced at least 50 balls? 
+3. Which player has scored the most fours and which player has scored the most sixes? 
+4. Which team has won the highest number of matches, and how many matches did they win? 
+5. For each match, who was the highest run scorer? Can you display the player name, team, opponent, match date, and runs scored? 
+6. Do teams perform better while chasing or while batting first? Compare their average runs and overall performance in both situations. 
+7. Who are the top 10 bowlers based on total wickets taken, and what are their average economy rates? 
+8. Which players have scored the most runs through boundaries (fours and sixes), and how does their strike rate compare with other players? 
+9. Can you create a Player Performance Score using runs, strike rate, fours, sixes, and balls faced, and use it to rank the top 20 batsmen? 
+10. Can you combine the batting and bowling data to identify the top 10 all-round performers? Create your own Match Impact Score using runs, wickets, strike rate, economy rate, boundaries, and match result? 
