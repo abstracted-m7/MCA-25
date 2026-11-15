@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:gravity="center"
+    android:padding="28dp">
+
+    <!-- App Logo Icon -->
+    <ImageView
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:background="@drawable/bg_option_selected"
+        android:padding="16dp"
+        android:src="@drawable/ic_quizhub_logo"
+        app:tint="@color/primary" />
+
+    <!-- App Name -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/app_name"
+        android:textColor="@color/text_primary"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/app_tagline"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_option_selected"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="6dp"
+        android:text="Intelligent 5-Attempt Adaptive Learning Engine"
+        android:textColor="@color/primary"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="64dp" />
+
+    <!-- Student Login CTA -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStudentLogin"
+        style="@style/QuizHubButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Student Portal"
+        android:textSize="15sp"
+        app:icon="@drawable/ic_person"
+        app:iconGravity="textStart"
+        app:iconTint="@color/white"
+        app:cornerRadius="14dp" />
+
+    <!-- Teacher Login CTA -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAdminLogin"
+        style="@style/QuizHubOutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Teacher / Admin Portal"
+        android:textColor="@color/primary"
+        android:textSize="15sp"
+        app:icon="@drawable/ic_subject"
+        app:iconGravity="textStart"
+        app:iconTint="@color/primary"
+        app:cornerRadius="14dp" />
+
+</LinearLayout>

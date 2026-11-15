@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="mailto" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.QuizMania">
+
+        <!-- Entry Launcher Activity -->
+        <activity
+            android:name=".view.launch.LaunchActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Authentication -->
+        <activity
+            android:name=".view.auth.AuthActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Dashboards -->
+        <activity
+            android:name=".view.dashboard.StudentDashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".view.dashboard.AdminDashboardActivity"
+            android:exported="false" />
+
+        <!-- Student Panel Modules -->
+        <activity
+            android:name=".student.SubjectBrowseActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".student.AttemptQuizActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".student.QuizResultActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".student.ReviewAnswersActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".student.MistakeNotebookActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".student.RevisionDashboardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".student.RevisionQuizActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".student.StudentProgressActivity"
+            android:exported="false" />
+
+        <!-- Teacher Panel Modules -->
+        <activity
+            android:name=".teacher.ManageSubjectActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".teacher.AddQuestionActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".teacher.CreateQuizActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".teacher.StudentTrackingActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".teacher.TeacherAnalyticsActivity"
+            android:exported="false" />
+
+        <!-- AI Quiz Generation -->
+        <activity
+            android:name=".view.quiz.AiQuizActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".view.quiz.QuizEngineActivity"
+            android:exported="false" />
+
+        <!-- User Feedback Module -->
+        <activity
+            android:name=".view.feedback.FeedbackActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+    </application>
+
+</manifest>

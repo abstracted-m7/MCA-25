@@ -1,0 +1,188 @@
+================================================================================
+QUIZHUB – STEP-BY-STEP ACTION & EXECUTION PLAN
+AI-Powered Adaptive Learning & Quiz Management Android Application
+================================================================================
+
+Now that QuizHub has been built, all Java classes, XML layouts, drawables, 
+and algorithms have been written, and the APK has compiled successfully, 
+follow this clear, step-by-step guide to run, test, verify, and present the app.
+
+--------------------------------------------------------------------------------
+STEP 1: FIREBASE CONSOLE VERIFICATION (ONE-TIME SETUP)
+--------------------------------------------------------------------------------
+QuizHub is connected to Firebase using your existing configuration:
+- Project ID: quizmania-25861
+- Package Name: com.example.quizmania
+
+Verify the following in the Firebase Console (https://console.firebase.google.com):
+1.1. Go to "Authentication" -> "Sign-in method":
+     - Ensure "Email/Password" is ENABLED.
+1.2. Go to "Firestore Database":
+     - Ensure Cloud Firestore is created/active.
+     - In the "Rules" tab, copy and paste the rules from the project's
+       `firestore.rules` file and click "Publish".
+     - Note: Default sample subjects and questions will automatically seed 
+       on first run if your Firestore collections are empty!
+
+--------------------------------------------------------------------------------
+STEP 2: RUN THE APP ON A DEVICE OR EMULATOR
+--------------------------------------------------------------------------------
+2.1. In Android Studio:
+     - Open the QuizMania project.
+     - Select a connected physical Android device (via USB/Wi-Fi debugging) 
+       or an Android Virtual Device (AVD Emulator with API 24+).
+     - Click the green "Run" button (Shift + F10).
+2.2. Alternatively, install the pre-compiled APK directly:
+     - The debug APK is located at:
+       app\build\outputs\apk\debug\app-debug.apk
+     - Run in PowerShell/Terminal:
+       adb install -r "app\build\outputs\apk\debug\app-debug.apk"
+
+--------------------------------------------------------------------------------
+STEP 3: TEST TEACHER PORTAL & CURRICULUM SETUP
+--------------------------------------------------------------------------------
+Start by registering a Teacher account to populate curriculum data:
+3.1. On the Launch Screen, select "Teacher / Admin Portal" or tap "Register" on the Auth screen.
+3.2. Select "Teacher / Admin" role, enter:
+     - Full Name: Professor Sharma
+     - Email: teacher@quizhub.com
+     - Password: password123 (6+ chars)
+3.3. Verify landing on the Teacher Dashboard:
+     - Check the metrics header (Students, Subjects, Quizzes, Submissions).
+3.4. Test "Manage Subjects":
+     - Tap "Manage Subjects". Observe pre-seeded subjects (Java, Python, DBMS, DSA).
+     - Tap "+ Add Subject" to create a new subject (e.g. "Cloud Computing").
+     - Tap an existing subject to add a new topic (e.g. "Microservices").
+3.5. Test "Question Bank":
+     - Tap "Question Bank" -> Add a new MCQ question with 4 options, 
+       correct answer selection, and an explanation.
+3.6. Test "Create Quiz":
+     - Create a quiz titled "Java Midterm Assessment", select "Java Programming", 
+       set duration to 10 mins, and click "Publish Quiz to Students".
+
+--------------------------------------------------------------------------------
+STEP 4: TEST STUDENT PORTAL & QUIZ ATTEMPTS
+--------------------------------------------------------------------------------
+Log out from the Teacher account and create a student account:
+4.1. On the Auth screen, select "Register", choose "Student" role:
+     - Full Name: Rohan Giri
+     - Roll Number: BWU/MCA/25/040 (Required for students)
+     - Email: rohan@quizhub.com
+     - Password: password123
+4.2. Verify the Student Dashboard:
+     - Welcome message displays student's name and roll number.
+     - Streak counter shows "1 Day Streak".
+     - Available quizzes list shows the quizzes created by teachers.
+4.3. Test Attempting a Quiz:
+     - Select a quiz (e.g. "Java OOP & Core Principles").
+     - Observe:
+       * Countdown timer ticking down in the header.
+       * Question indicator (e.g. "Question 1 of 5").
+       * Linear progress bar advancing as you navigate.
+       * Option card click highlighting (blue accent).
+       * Previous and Next buttons.
+     - Answer some questions correctly and deliberately answer 1 or 2 incorrectly 
+       to test the adaptive learning mistake tracking!
+     - Tap "Submit Quiz" -> review the confirmation dialog ("You have answered X of Y").
+     - Confirm submission.
+4.4. Verify Result Screen:
+     - Check percentage, score marks, correct count, wrong count, and time taken.
+     - Tap "Review Answers & Explanations" to inspect the question breakdown.
+
+--------------------------------------------------------------------------------
+STEP 5: TEST THE 5-ATTEMPT ADAPTIVE LEARNING ENGINE (CORE DIFFERENTIATOR)
+--------------------------------------------------------------------------------
+This is the most critical feature of QuizHub:
+5.1. Attempt quizzes in the SAME subject (e.g. Java Programming) 5 times:
+     - Attempt 1 -> Complete
+     - Attempt 2 -> Complete
+     - Attempt 3 -> Complete
+     - Attempt 4 -> Complete
+     - Attempt 5 -> Complete
+5.2. Open "Adaptive Revision" from the Student Dashboard:
+     - Observe the 5-Step visual indicator updating (1 -> 2 -> 3 -> 4 -> 5).
+5.3. On completion of Attempt 5:
+     - Observe the automated trigger: A personalized revision quiz is generated!
+     - Check the Student Dashboard: A prominent yellow alert banner appears:
+       "Adaptive Revision Ready! 5/5 Attempts completed. Practice your weak spots now."
+5.4. Open the Mistake Notebook:
+     - Verify historical wrong answers are listed with:
+       * Question snapshot
+       * Your selected answer (highlighted in red)
+       * Correct answer (highlighted in green)
+       * Answer explanation
+       * Mastery Badge: "Weak"
+     - Tap "Practice Again" to test quick single-question practice.
+5.5. Attempt the Personalized Revision Quiz:
+     - Tap "Start Revision Quiz".
+     - Notice that all questions are deduplicated questions from your mistakes.
+     - Answer the questions correctly.
+     - Submit the revision quiz.
+     - Observe the Completion Milestone dialog:
+       * Displays before/after accuracy improvement (+X percentage points!).
+       * Questions answered correctly in revision advance from "Weak" -> "Practicing" -> "Mastered".
+
+--------------------------------------------------------------------------------
+STEP 6: TEST OPENROUTER AI QUIZ GENERATOR
+--------------------------------------------------------------------------------
+6.1. Tap "AI Quiz Generator" from Student Dashboard or floating action button.
+6.2. Enter:
+     - Topic: "Binary Search Trees" or "Operating System Deadlocks"
+     - Questions: 5
+     - Model: OpenRouter Auto (Free)
+6.3. Tap "Generate Quiz with AI".
+6.4. Verify:
+     - Status updates as it contacts the OpenRouter API.
+     - Automatically parses structured JSON and launches the interactive quiz engine.
+
+--------------------------------------------------------------------------------
+STEP 7: TEST STUDENT PROGRESS & ANALYTICS DASHBOARD
+--------------------------------------------------------------------------------
+7.1. From Student Dashboard, tap "My Progress & Analytics".
+7.2. Inspect:
+     - Overall accuracy card and total quizzes counter.
+     - Custom Subject Bar Chart (Java, Python, DBMS, DSA) with dynamic bars.
+     - Weak Topics list (ranked by frequency of mistakes).
+     - Adaptive Question Mastery counts (Weak vs Practicing vs Mastered).
+
+--------------------------------------------------------------------------------
+STEP 8: TEST TEACHER STUDENT TRACKING & CLASS ANALYTICS
+--------------------------------------------------------------------------------
+Log back into the Teacher account:
+8.1. Tap "Student Tracking":
+     - Type the student roll number into the search bar: "BWU/MCA/25/040".
+     - Notice instant live filtering.
+     - Tap the student card -> review the comprehensive profile:
+       * Roll number, Name, Email
+       * Total attempts & overall accuracy
+       * Weak topics specific to that student
+8.2. Tap "Teacher Class Analytics":
+     - View class-wide benchmark (average score across all student submissions).
+     - Subject score comparison bar chart.
+     - Frequently missed questions across the entire class.
+     - Class-wide weak curriculum topics.
+
+--------------------------------------------------------------------------------
+STEP 9: OPTIONAL - DEPLOY CLOUD FUNCTION GATEWAY
+--------------------------------------------------------------------------------
+If you want to proxy OpenRouter calls through Firebase Cloud Functions:
+9.1. In `functions/main.py`, the gateway functions `/generateQuiz` and 
+     `/generateRevisionQuiz` are already created.
+9.2. To deploy using Firebase CLI (optional):
+     firebase deploy --only functions
+
+--------------------------------------------------------------------------------
+STEP 10: ACADEMIC / MCA VIVA & PRESENTATION CHECKLIST
+--------------------------------------------------------------------------------
+When demonstrating QuizHub for your MCA project presentation:
+1. Highlight the Dual-Panel Architecture (Teacher creates curriculum, Student attempts).
+2. Emphasize the Adaptive Learning Engine algorithm:
+   - "Traditional quiz apps just show a score; QuizHub learns from student mistakes."
+   - "Every wrong answer is snapshotted in Firestore."
+   - "On the 5th attempt in a subject, it deduplicates question IDs and generates a personalized revision quiz."
+   - "Mastery tracking moves questions from Weak -> Practicing -> Mastered."
+3. Highlight the AI Integration:
+   - OpenRouter API generating dynamic MCQs with explanations.
+4. Demonstrate Student Tracking by Roll Number:
+   - Search for a student roll number (`BWU/MCA/25/040`) and show their progress report.
+================================================================================

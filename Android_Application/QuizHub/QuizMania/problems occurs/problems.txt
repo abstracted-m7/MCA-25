@@ -1,0 +1,7 @@
+1. The wrong answer are not showing just showing th ecorrect answers.
+2. Mistake notebook are not performing showing Failed_precondition.
+3. In the home page the day streak are not working, after multiple attempts showing 0 attempt, 0% accuracy, 0% Avg score.
+4. In teacher panel the student tracking are showing all 0, after 5 time attempts by student.
+5. marge Create & publish Quiz and Question Bank, means when a teacher create a quiz that time they add questions, options, answer, explanation in together. then teacher published the quiz which reflect to the student portal. And the wrong questions answer are stored in Database after 5 attempts automatically create a new quiz based on those wrong answer question's.
+6. in student panel the My Progress & analytics part are not working.
+7. The adaptive revision part after 5 attempt shows Generate quiz based on those wrong answer's question which is stored in the database.

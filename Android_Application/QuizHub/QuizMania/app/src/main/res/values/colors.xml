@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Core Brand Colors -->
+    <color name="primary">#2563EB</color>
+    <color name="primary_dark">#142B4A</color>
+    <color name="primary_variant">#1D4ED8</color>
+    <color name="light_blue">#EFF6FF</color>
+    <color name="blue_subtle">#DBEAFE</color>
+    <color name="blue_accent">#3B82F6</color>
+
+    <!-- Backgrounds & Surfaces -->
+    <color name="background">#F5F7FB</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="surface_variant">#F1F5F9</color>
+
+    <!-- Semantic Feedback Colors -->
+    <color name="success">#16A36A</color>
+    <color name="success_light">#DCFCE7</color>
+    <color name="error">#DC5555</color>
+    <color name="error_light">#FEE2E2</color>
+    <color name="warning">#F59E0B</color>
+    <color name="warning_light">#FEF3C7</color>
+
+    <!-- Typography & Neutral Colors -->
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#475569</color>
+    <color name="text_tertiary">#64748B</color>
+    <color name="text_hint">#64748B</color>
+    <color name="edit_text_color">#000000</color>
+    <color name="divider">#E2E8F0</color>
+    <color name="border">#CBD5E1</color>
+
+    <!-- Basic Constants -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Adaptive Learning Mastery Colors -->
+    <color name="mastery_weak">#EF4444</color>
+    <color name="mastery_practicing">#F59E0B</color>
+    <color name="mastery_mastered">#10B981</color>
+</resources>

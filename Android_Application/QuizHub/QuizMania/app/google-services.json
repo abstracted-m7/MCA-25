@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "893380161485",
+    "project_id": "quizmania-25861",
+    "storage_bucket": "quizmania-25861.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893380161485:android:3b50546f8eb2040222de84",
+        "android_client_info": {
+          "package_name": "com.example.quizmania"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALX0Q_9fV9n5stZGwZf3nJUIkhbeNzFO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

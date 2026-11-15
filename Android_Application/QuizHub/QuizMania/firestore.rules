@@ -1,0 +1,85 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isUser(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isTeacher() {
+      return isAuthenticated() && 
+        (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'TEACHER' ||
+         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'ADMIN');
+    }
+
+    // Users Collection: Users can read/write their own record; Teachers can view all student records
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow write: if isUser(userId) || isTeacher();
+    }
+
+    // Subjects & Topics: Anyone authenticated can read; Only teachers can create or edit
+    match /subjects/{subjectId} {
+      allow read: if isAuthenticated();
+      allow write: if isTeacher();
+    }
+
+    match /topics/{topicId} {
+      allow read: if isAuthenticated();
+      allow write: if isTeacher();
+    }
+
+    // Questions (Question Bank): Authenticated users can read; Only teachers can create/modify
+    match /questions/{questionId} {
+      allow read: if isAuthenticated();
+      allow write: if isTeacher();
+    }
+
+    // Quizzes: Authenticated users can read; Teachers can manage
+    match /quizzes/{quizId} {
+      allow read: if isAuthenticated();
+      allow write: if isTeacher();
+
+      match /questions/{questionId} {
+        allow read: if isAuthenticated();
+        allow write: if isTeacher();
+      }
+    }
+
+    // Quiz Attempts: Students can write their own attempts; Students can read their own; Teachers can read all for analytics
+    match /quizAttempts/{attemptId} {
+      allow create: if isAuthenticated() && request.resource.data.studentId == request.auth.uid;
+      allow read: if isAuthenticated() && (resource.data.studentId == request.auth.uid || isTeacher());
+      allow update, delete: if isTeacher();
+    }
+
+    // Wrong Answers: Recorded during quiz submissions; Read by the student and teachers
+    match /wrongAnswers/{wrongAnswerId} {
+      allow create: if isAuthenticated() && request.resource.data.studentId == request.auth.uid;
+      allow read: if isAuthenticated() && (resource.data.studentId == request.auth.uid || isTeacher());
+      allow update: if isAuthenticated() && resource.data.studentId == request.auth.uid;
+      allow delete: if isTeacher();
+    }
+
+    // Learning Progress (5-Attempt Counter):
+    match /learningProgress/{progressId} {
+      allow read, write: if isAuthenticated() && (progressId.matches(request.auth.uid + '.*') || isTeacher());
+    }
+
+    // Revision Quizzes:
+    match /revisionQuizzes/{revisionId} {
+      allow read, write: if isAuthenticated() && (resource == null || resource.data.studentId == request.auth.uid || isTeacher());
+    }
+
+    // Revision Attempts:
+    match /revisionAttempts/{attemptId} {
+      allow create: if isAuthenticated() && request.resource.data.studentId == request.auth.uid;
+      allow read: if isAuthenticated() && (resource.data.studentId == request.auth.uid || isTeacher());
+    }
+  }
+}
